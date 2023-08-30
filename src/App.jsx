@@ -3,12 +3,13 @@ import './App.css'
 import { Form, FetchRequest } from './components'
 
 function App() {
-  
+  const [pokeData, setPokeData] = useState([])
 
   return (
     <>
-      <Form/>
-      <FetchRequest />
+      <h1>Search For a Pokemon</h1>
+      <Form pokeData={pokeData} setPokeData={setPokeData} />
+      <FetchRequest pokeData={pokeData} setPokeData={setPokeData} />
     </>
   )
 }
