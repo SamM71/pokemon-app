@@ -3,26 +3,24 @@ import { useEffect } from "react"
 function Info(props) {
   let name, id, height, weight, image = ''
   let types = []
+  let data = props.pokeData
 
-
-  async function getInfo() {
+  function getInfo() {
     try {
-      console.log(props)
-      if (props.pokeData.species) {
-        name = props.pokeData.species.name
-        console.log(name)
-        id = props.pokeData.id
-        height = props.pokeData.height
-        weight = props.pokeData.weight
+      if (data.species) {
+        name = data.species.name
+        id = data.id
+        height = data.height
+        weight = data.weight
         
         
-        types = props.pokeData.types[0].type.name
+        types = data.types[0].type.name
 
-        if (props.pokeData.types.length > 1) {
-          types += `, ${props.pokeData.types[1].type.name}`
+        if (data.types.length > 1) {
+          types += `, ${data.types[1].type.name}`
         }
 
-        image = props.pokeData.sprites.front_default
+        image = data.sprites.front_default
 
       }
     } catch (error) {
