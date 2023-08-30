@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import { Form } from './components'
+import { Form, FetchRequest } from './components'
 
 function App() {
   
@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Form/>
+      <FetchRequest />
     </>
   )
 }
