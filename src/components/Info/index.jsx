@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 function Info(props) {
-  let name, id, height, weight = ''
+  let name, id, height, weight, image = ''
   let types = []
 
 
@@ -22,6 +22,8 @@ function Info(props) {
           types += `, ${props.pokeData.types[1].type.name}`
         }
 
+        image = props.pokeData.sprites.front_default
+
       }
     } catch (error) {
       console.log(error)
@@ -36,6 +38,7 @@ function Info(props) {
   return (
     <>
       <div>
+        <a><img src={image} alt="" /></a>
         <p>Name: {name}</p>
         <p>Number: {id}</p>
         <p>Height: {height/10}m</p>
