@@ -1,2 +1,2 @@
 export { default as Form } from './Form'
-export { default as FetchRequest } from './FetchRequest'
+export { default as Info } from './Info'

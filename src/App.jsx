@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import { Form, FetchRequest } from './components'
+import { Form, Info } from './components'
 
 function App() {
   const [pokeData, setPokeData] = useState([])
@@ -9,7 +9,7 @@ function App() {
     <>
       <h1>Search For a Pokemon</h1>
       <Form pokeData={pokeData} setPokeData={setPokeData} />
-      <FetchRequest pokeData={pokeData} setPokeData={setPokeData} />
+      <Info pokeData={pokeData} setPokeData={setPokeData} />
     </>
   )
 }

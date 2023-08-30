@@ -1,4 +1,4 @@
-function FetchRequest(props) {
+function Info(props) {
   return (
     <>
       <div>
@@ -15,4 +15,4 @@ function FetchRequest(props) {
   )
 }
 
-export default FetchRequest
+export default Info
